@@ -13,7 +13,6 @@ public class smsService {
   private String accountSID;
   private String authToken;
   private String fromNumber;
-  private String toNumber;
 
   @PostConstruct
   public void initialise() {
@@ -26,7 +25,7 @@ public class smsService {
        new PhoneNumber(fromNumber),
         messageBody
         ).create();
-        
+
         return message.getStatus().toString();
   }
 }

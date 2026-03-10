@@ -9,7 +9,7 @@ import com.twilio.type.PhoneNumber;
 import jakarta.annotation.PostConstruct;
 
 @Service
-public class smsService {
+public class SmsService {
   private String accountSID;
   private String authToken;
   private String fromNumber;

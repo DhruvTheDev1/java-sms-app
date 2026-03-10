@@ -5,13 +5,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dhruvthedev1.java_sms_app.service.smsService;
+import com.dhruvthedev1.java_sms_app.service.SmsService;
 
 @RestController
-public class smsController {
+public class SmsController {
   
   @Autowired
-  private smsService smsService;
+  private SmsService smsService;
 
   @GetMapping("/sendSMS")
   private String sendSMS(@RequestParam String receipient, @RequestParam String message) {

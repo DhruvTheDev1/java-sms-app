@@ -1,5 +1,6 @@
 package com.dhruvthedev1.java_sms_app.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.twilio.Twilio;
@@ -10,8 +11,11 @@ import jakarta.annotation.PostConstruct;
 
 @Service
 public class SmsService {
+  @Value("${twilio.sid}")
   private String accountSID;
+  @Value("${twilio.auth.token}")
   private String authToken;
+  @Value("${twilio.from.number}")
   private String fromNumber;
 
   @PostConstruct
